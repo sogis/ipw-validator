@@ -1,0 +1,3 @@
+rootProject.name = 'ipw-validator'
+include('lib')
+include('functionalTests')

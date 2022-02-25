@@ -1,0 +1,32 @@
+plugins {
+    id 'java-library'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url "https://jars.interlis.ch" }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+
+    api 'ch.interlis:ilivalidator:1.11.13'
+}
+
+tasks.named('test') {
+    useJUnitPlatform() /*{
+        excludeTags 'complete'
+    }*/
+}
+
+/*
+task completeTest(type: Test) {
+    useJUnitPlatform {
+        includeTags 'complete'
+    }
+    maxHeapSize = '12G'
+}
+*/
