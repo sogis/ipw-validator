@@ -17,16 +17,14 @@ dependencies {
 }
 
 tasks.named('test') {
-    useJUnitPlatform() /*{
-        excludeTags 'complete'
-    }*/
+    useJUnitPlatform() {
+        excludeTags 'system'
+    }
 }
 
-/*
-task completeTest(type: Test) {
+task systemTest(type: Test) {
     useJUnitPlatform {
-        includeTags 'complete'
+        includeTags 'system'
     }
-    maxHeapSize = '12G'
+    maxHeapSize = '2G'
 }
-*/
