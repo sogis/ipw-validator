@@ -155,5 +155,79 @@ public class Knoten {
         assertFalse(content.contains("Error"));
     }    
 
+    @Test
+    public void Id_11007_fail(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"knoten/11007/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"knoten/11007/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"knoten/11007/11007_fail.xtf", settings);
+        assertFalse(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        assertTrue(content.contains("Error: line 21: VSADSSMINI_2020_LV95.VSADSSMini.Knoten: tid deg5mQXX20001001: MANDATORY Deckelkote (gilt für PAA)"));
+    }
+    
+    @Test
+    public void Id_11007_ok(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"knoten/11007/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"knoten/11007/config.toml");
+        settings.setValue(Validator.SETTING_ALL_OBJECTS_ACCESSIBLE, Validator.TRUE);
+        
+        EhiLogger.getInstance().setTraceFilter(false);
+        
+        boolean valid = Validator.runValidation(TEST_IN+"knoten/11007/11007_ok.xtf", settings);
+        assertTrue(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        assertFalse(content.contains("Warning"));
+        assertFalse(content.contains("Error"));
+    }    
+    
+    @Test
+    public void Id_11008_fail(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"knoten/11008/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"knoten/11008/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"knoten/11008/11008_fail.xtf", settings);
+        assertFalse(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        //System.out.println(content);
+        assertTrue(content.contains("Error: line 21: VSADSSMINI_2020_LV95.VSADSSMini.Knoten: tid deg5mQXX20001001: MANDATORY Detailgeometrie (gilt für PAA)"));
+    }
+
+    @Test
+    public void Id_11008_ok(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"knoten/11008/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"knoten/11008/config.toml");
+        settings.setValue(Validator.SETTING_ALL_OBJECTS_ACCESSIBLE, Validator.TRUE);
+        
+        EhiLogger.getInstance().setTraceFilter(false);
+        
+        boolean valid = Validator.runValidation(TEST_IN+"knoten/11008/11008_ok.xtf", settings);
+        assertTrue(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        assertFalse(content.contains("Warning"));
+        assertFalse(content.contains("Error"));
+    }    
+
+
 
 }
