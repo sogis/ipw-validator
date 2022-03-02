@@ -15,9 +15,9 @@ VERSION "2022-02-26"  =
     =
         ALL OF Knoten;
                 
-        !!@ name = 11008
-        !!@ ilivalid.msg = "MANDATORY Detailgeometrie (gilt für PAA)"                 
-        MANDATORY CONSTRAINT DEFINED(Detailgeometrie) OR FunktionHierarchisch == #SAA;
+        !!@ name = 11012
+        !!@ ilivalid.msg = "MANDATORY Finanzierung AND != unbekannt"                 
+        MANDATORY CONSTRAINT DEFINED(Finanzierung) AND Finanzierung != #unbekannt;
 
     END v_Knoten;
         
