@@ -242,9 +242,29 @@ public class Knoten {
 
         String content = new String(Files.readAllBytes(Paths.get(logFileName)));
         System.out.println(content);
-        //assertTrue(content.contains("Error: line 21: VSADSSMINI_2020_LV95.VSADSSMini.Knoten: tid deg5mQXX20001001: MANDATORY Detailgeometrie (gilt für PAA)"));
+        assertTrue(content.contains("Error: line 22: VSADSSMINI_2020_LV95.VSADSSMini.Knoten: tid deg5mQXX20001001: MANDATORY Finanzierung AND != unbekannt"));
+        assertTrue(content.contains("Error: line 37: VSADSSMINI_2020_LV95.VSADSSMini.Knoten: tid deg5mQXX20001002: MANDATORY Finanzierung AND != unbekannt"));
     }
 
+    @Test
+    public void Id_11012_ok(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"knoten/11012/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"knoten/11012/config.toml");
+        settings.setValue(Validator.SETTING_ALL_OBJECTS_ACCESSIBLE, Validator.TRUE);
+        
+        EhiLogger.getInstance().setTraceFilter(false);
+        
+        boolean valid = Validator.runValidation(TEST_IN+"knoten/11012/11012_ok.xtf", settings);
+        assertTrue(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        assertFalse(content.contains("Warning"));
+        assertFalse(content.contains("Error"));
+    }    
 
 
 }

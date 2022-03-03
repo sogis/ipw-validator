@@ -25,20 +25,7 @@
         <DatenherrRef REF="deg5mQXX20000001"/>
         <DatenlieferantRef REF="deg5mQXX20000001"/>
         <Bezeichnung>Knoten_1</Bezeichnung>
-        <FunktionHierarchisch>PAA</FunktionHierarchisch>
-        <Detailgeometrie>
-          <SURFACE> 
-            <BOUNDARY>
-              <POLYLINE>
-                <COORD><C1>2600000.000</C1><C2>1200000.000</C2></COORD>
-                <COORD><C1>2600010.000</C1><C2>1200000.000</C2></COORD>
-                <COORD><C1>2600010.000</C1><C2>1200010.000</C2></COORD>
-                <COORD><C1>2600000.000</C1><C2>1200010.000</C2></COORD>
-                <COORD><C1>2600000.000</C1><C2>1200000.000</C2></COORD>
-              </POLYLINE>
-            </BOUNDARY>
-          </SURFACE>
-        </Detailgeometrie>
+        <Finanzierung>oeffentlich</Finanzierung>
         <Lage>
           <COORD>
             <C1>2603917.000</C1>
@@ -49,22 +36,6 @@
         <EigentuemerRef REF="deg5mQXX20000001"/>
       </VSADSSMINI_2020_LV95.VSADSSMini.Knoten>
       
-      <VSADSSMINI_2020_LV95.VSADSSMini.Knoten TID="deg5mQXX20001002">
-        <Letzte_Aenderung>20201115</Letzte_Aenderung>
-        <DatenherrRef REF="deg5mQXX20000001"/>
-        <DatenlieferantRef REF="deg5mQXX20000001"/>
-        <Bezeichnung>Knoten_2</Bezeichnung>
-        <FunktionHierarchisch>SAA</FunktionHierarchisch>
-        <Lage>
-          <COORD>
-            <C1>2603919.000</C1>
-            <C2>1225515.000</C2>
-          </COORD>
-        </Lage>
-        <BetreiberRef REF="deg5mQXX20000001"/>
-        <EigentuemerRef REF="deg5mQXX20000001"/>
-      </VSADSSMINI_2020_LV95.VSADSSMini.Knoten>
-
     </VSADSSMINI_2020_LV95.VSADSSMini>
   </DATASECTION>
 </TRANSFER>
