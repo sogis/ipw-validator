@@ -1,0 +1,26 @@
+INTERLIS 2.3;
+
+CONTRACTED MODEL VSADSSMINI_2020_LV95_Validierung_IPW (de)
+AT "https://geo.so.ch"
+VERSION "2022-02-26"  =
+  
+  IMPORTS VSADSSMINI_2020_LV95;
+  IMPORTS UNQUALIFIED INTERLIS;
+  
+  VIEW TOPIC VSADSSMini_Validierung = 
+  DEPENDS ON VSADSSMINI_2020_LV95.VSADSSMini;
+  
+	VIEW v_Knoten
+    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Knoten;
+    =
+        ALL OF Knoten;
+                
+        !!@ name = 11025
+        !!@ ilivalid.msg = "MANDATORY Status AND != unbekannt"                 
+        MANDATORY CONSTRAINT DEFINED(Status) AND Status != #unbekannt;
+
+    END v_Knoten;
+        
+  END VSADSSMini_Validierung;
+
+END VSADSSMINI_2020_LV95_Validierung_IPW.
