@@ -23,15 +23,34 @@ public class Leitung {
         
         Settings settings = new Settings();
         settings.setValue(Validator.SETTING_LOGFILE, logFileName);
-        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"knoten/12001/");
-        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"knoten/12001/config.toml");
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"leitung/12001/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12001/config.toml");
         
-        boolean valid = Validator.runValidation(TEST_IN+"knoten/12001/12001_fail.xtf", settings);
+        boolean valid = Validator.runValidation(TEST_IN+"leitung/12001/12001_fail.xtf", settings);
         assertFalse(valid);
 
         String content = new String(Files.readAllBytes(Paths.get(logFileName)));
-        System.out.println(content);
-        assertTrue(content.contains("Error: line 21: VSADSSMINI_2020_LV95.VSADSSMini.Knoten: tid deg5mQXX20001001: MANDATORY ARA_Nr"));
+        //System.out.println(content);
+        assertTrue(content.contains("Error: line 39: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002002: MANDATORY Baujahr (gilt für PAA)"));
+    }
+
+    
+    @Test
+    public void Id_12001_ok(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"leitung/12001/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12001/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"leitung/12001/12001_ok.xtf", settings);
+        assertTrue(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        //System.out.println(content);
+        assertFalse(content.contains("Warning"));
+        assertFalse(content.contains("Error"));
     }
 
 }

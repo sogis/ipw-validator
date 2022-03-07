@@ -11,6 +11,7 @@
   </HEADERSECTION>
   <DATASECTION>
     <VSADSSMINI_2020_LV95.VSADSSMini BID="VSADSSMINI_2020_LV95.VSADSSMini">
+    
       <SIA405_Base_Abwasser_LV95.Administration.Organisation TID="deg5mQXX20000001">
         <Letzte_Aenderung>20201110</Letzte_Aenderung>
         <Bezeichnung>Musterkofen</Bezeichnung>
@@ -18,6 +19,14 @@
         <Organisationstyp>Abwasserverband</Organisationstyp>
         <Status>aktiv</Status>
       </SIA405_Base_Abwasser_LV95.Administration.Organisation>
+      
+      <!-- 
+      Obwohl Baujahr fehlt, wird kein Fehler erkannt. Da der zweite Teil des Constraints
+      nicht ausgewertet werden kann. Im Referenzhandbuch ist dies erklärt: "Ist eine Konsistenzbedingung 
+      (MANDATORY CONSTRAINT) nicht berechenbar (weil z.B. ein Attribut beteiligt ist, dessen Wert
+      undefiniert ist, oder der Divisor 0 beträgt) so gilt die Konsistenzbedingung für das aktuelle Objekt als erfüllt."
+      Ilivalidator funktioniert auch für ili2.3 so.
+      -->
       <VSADSSMINI_2020_LV95.VSADSSMini.Leitung TID="deg5mQXX20002001">
         <Letzte_Aenderung>20201112</Letzte_Aenderung>
         <DatenherrRef REF="deg5mQXX20000001"/>
@@ -26,6 +35,17 @@
         <BetreiberRef REF="deg5mQXX20000001"/>
         <EigentuemerRef REF="deg5mQXX20000001"/>
       </VSADSSMINI_2020_LV95.VSADSSMini.Leitung>
+
+      <VSADSSMINI_2020_LV95.VSADSSMini.Leitung TID="deg5mQXX20002002">
+        <Letzte_Aenderung>20201112</Letzte_Aenderung>
+        <DatenherrRef REF="deg5mQXX20000001"/>
+        <DatenlieferantRef REF="deg5mQXX20000001"/>
+        <Bezeichnung>Leitung_2</Bezeichnung>
+        <FunktionHierarchisch>PAA.andere</FunktionHierarchisch>
+        <BetreiberRef REF="deg5mQXX20000001"/>
+        <EigentuemerRef REF="deg5mQXX20000001"/>
+      </VSADSSMINI_2020_LV95.VSADSSMini.Leitung>
+      
     </VSADSSMINI_2020_LV95.VSADSSMini>
   </DATASECTION>
 </TRANSFER>

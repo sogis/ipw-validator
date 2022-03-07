@@ -10,16 +10,16 @@ VERSION "2022-02-26"  =
   VIEW TOPIC VSADSSMini_Validierung = 
   DEPENDS ON VSADSSMINI_2020_LV95.VSADSSMini;
   
-	VIEW v_Knoten
-    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Knoten;
+	VIEW v_Leitung
+    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Leitung;
     =
-        ALL OF Knoten;
+        ALL OF Leitung;
                 
-        !!@ name = 11002
+        !!@ name = 12001
         !!@ ilivalid.msg = "MANDATORY Baujahr (gilt für PAA)"                 
-        MANDATORY CONSTRAINT DEFINED(Baujahr) OR FunktionHierarchisch == #SAA;
+        MANDATORY CONSTRAINT DEFINED(Baujahr) OR isEnumSubVal(FunktionHierarchisch,#SAA);
 
-    END v_Knoten;
+    END v_Leitung;
         
   END VSADSSMini_Validierung;
 
