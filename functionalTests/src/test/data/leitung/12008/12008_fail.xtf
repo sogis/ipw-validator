@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
+  <HEADERSECTION SENDER="ili2pg-4.4.2-7b1d50437cd6970a801b16d177c4e27151414569" VERSION="2.3">
+    <MODELS>
+      <MODEL NAME="Units" VERSION="2012-02-20" URI="http://www.interlis.ch/models"/>
+      <MODEL NAME="Base" VERSION="05.10.2018" URI="http://www.sia.ch/405"/>
+      <MODEL NAME="Base_LV95" VERSION="05.10.2018" URI="http://www.sia.ch/405"/>
+      <MODEL NAME="SIA405_Base_Abwasser_LV95" VERSION="03.11.2020" URI="http://www.vsa.ch/models"/>
+      <MODEL NAME="VSADSSMINI_2020_LV95" VERSION="09.11.2020" URI="http://www.vsa.ch/models"/>
+    </MODELS>
+  </HEADERSECTION>
+  <DATASECTION>
+    <VSADSSMINI_2020_LV95.VSADSSMini BID="VSADSSMINI_2020_LV95.VSADSSMini">
+    
+      <SIA405_Base_Abwasser_LV95.Administration.Organisation TID="deg5mQXX20000001">
+        <Letzte_Aenderung>20201110</Letzte_Aenderung>
+        <Bezeichnung>Musterkofen</Bezeichnung>
+        <Gemeindenummer>2464</Gemeindenummer>
+        <Organisationstyp>Abwasserverband</Organisationstyp>
+        <Status>aktiv</Status>
+      </SIA405_Base_Abwasser_LV95.Administration.Organisation>
+      
+      <VSADSSMINI_2020_LV95.VSADSSMini.Leitung TID="deg5mQXX20002001">
+        <Letzte_Aenderung>20201112</Letzte_Aenderung>
+        <DatenherrRef REF="deg5mQXX20000001"/>
+        <DatenlieferantRef REF="deg5mQXX20000001"/>
+        <Bezeichnung>Leitung_1</Bezeichnung>
+        <BetreiberRef REF="deg5mQXX20000001"/>
+        <EigentuemerRef REF="deg5mQXX20000001"/>
+      </VSADSSMINI_2020_LV95.VSADSSMini.Leitung>
+
+      <VSADSSMINI_2020_LV95.VSADSSMini.Leitung TID="deg5mQXX20002002">
+        <Letzte_Aenderung>20201112</Letzte_Aenderung>
+        <DatenherrRef REF="deg5mQXX20000001"/>
+        <DatenlieferantRef REF="deg5mQXX20000001"/>
+        <Bezeichnung>Leitung_2</Bezeichnung>
+        <FunktionHierarchisch>PAA.unbekannt</FunktionHierarchisch>
+        <BetreiberRef REF="deg5mQXX20000001"/>
+        <EigentuemerRef REF="deg5mQXX20000001"/>
+      </VSADSSMINI_2020_LV95.VSADSSMini.Leitung>
+
+      <VSADSSMINI_2020_LV95.VSADSSMini.Leitung TID="deg5mQXX20002003">
+        <Letzte_Aenderung>20201112</Letzte_Aenderung>
+        <DatenherrRef REF="deg5mQXX20000001"/>
+        <DatenlieferantRef REF="deg5mQXX20000001"/>
+        <Bezeichnung>Leitung_3</Bezeichnung>
+        <FunktionHierarchisch>SAA.unbekannt</FunktionHierarchisch>
+        <BetreiberRef REF="deg5mQXX20000001"/>
+        <EigentuemerRef REF="deg5mQXX20000001"/>
+      </VSADSSMINI_2020_LV95.VSADSSMini.Leitung>
+      
+    </VSADSSMINI_2020_LV95.VSADSSMini>
+  </DATASECTION>
+</TRANSFER>

@@ -1,0 +1,26 @@
+INTERLIS 2.3;
+
+CONTRACTED MODEL VSADSSMINI_2020_LV95_Validierung_IPW (de)
+AT "https://geo.so.ch"
+VERSION "2022-02-26"  =
+  
+  IMPORTS VSADSSMINI_2020_LV95;
+  IMPORTS UNQUALIFIED INTERLIS;
+  
+  VIEW TOPIC VSADSSMini_Validierung = 
+  DEPENDS ON VSADSSMINI_2020_LV95.VSADSSMini;
+  
+	VIEW v_Leitung
+    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Leitung;
+    =
+        ALL OF Leitung;
+                
+        !!@ name = 12002
+        !!@ ilivalid.msg = "MANDATORY BaulicherZustand"                 
+        MANDATORY CONSTRAINT DEFINED(BaulicherZustand);
+
+    END v_Leitung;
+        
+  END VSADSSMini_Validierung;
+
+END VSADSSMINI_2020_LV95_Validierung_IPW.
