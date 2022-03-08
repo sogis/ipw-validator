@@ -444,6 +444,41 @@ public class Leitung {
         assertFalse(content.contains("Warning"));
         assertFalse(content.contains("Error"));
     }
+    
+    @Test
+    public void Id_12019_fail(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"leitung/12019/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12019/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"leitung/12019/12019_fail.xtf", settings);
+        assertFalse(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        //System.out.println(content);
+        assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002001: MANDATORY Leckschutz"));
+    }
+
+    @Test
+    public void Id_12019_ok(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"leitung/12019/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12019/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"leitung/12019/12019_ok.xtf", settings);
+        assertTrue(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        //System.out.println(content);
+        assertFalse(content.contains("Warning"));
+        assertFalse(content.contains("Error"));
+    }
 
     @Test
     public void Id_12021_fail(@TempDir Path tempDir) throws Exception {
@@ -549,6 +584,78 @@ public class Leitung {
         assertFalse(content.contains("Warning"));
         assertFalse(content.contains("Error"));
     }
+    
+    @Test
+    public void Id_12024_fail(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"leitung/12024/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12024/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"leitung/12024/12024_fail.xtf", settings);
+        assertFalse(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        //System.out.println(content);
+        assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002001: MANDATORY Nutzungsart_geplant AND != unbekannt"));
+        assertTrue(content.contains("Error: line 32: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002002: MANDATORY Nutzungsart_geplant AND != unbekannt"));
+    }
+
+    @Test
+    public void Id_12024_ok(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"leitung/12024/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12024/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"leitung/12024/12024_ok.xtf", settings);
+        assertTrue(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        //System.out.println(content);
+        assertFalse(content.contains("Warning"));
+        assertFalse(content.contains("Error"));
+    }
+
+    @Test
+    public void Id_12025_fail(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"leitung/12025/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12025/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"leitung/12025/12025_fail.xtf", settings);
+        assertFalse(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        //System.out.println(content);
+        assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002001: MANDATORY Nutzungsart_Ist AND != unbekannt"));
+        assertTrue(content.contains("Error: line 32: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002002: MANDATORY Nutzungsart_Ist AND != unbekannt"));
+    }
+
+    @Test
+    public void Id_12025_ok(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"leitung/12025/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12025/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"leitung/12025/12025_ok.xtf", settings);
+        assertTrue(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        //System.out.println(content);
+        assertFalse(content.contains("Warning"));
+        assertFalse(content.contains("Error"));
+    }
 
     @Test
     public void Id_12030_fail(@TempDir Path tempDir) throws Exception {
@@ -612,6 +719,114 @@ public class Leitung {
         settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12031/config.toml");
         
         boolean valid = Validator.runValidation(TEST_IN+"leitung/12031/12031_ok.xtf", settings);
+        assertTrue(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        //System.out.println(content);
+        assertFalse(content.contains("Warning"));
+        assertFalse(content.contains("Error"));
+    }
+    
+    @Disabled
+    @Test
+    public void Id_12035_fail(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"leitung/12035/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12035/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"leitung/12035/12035_fail.xtf", settings);
+        assertFalse(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        System.out.println(content);
+//        assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002001: MANDATORY Nutzungsart_Ist AND != unbekannt"));
+//        assertTrue(content.contains("Error: line 32: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002002: MANDATORY Nutzungsart_Ist AND != unbekannt"));
+    }
+
+    @Disabled
+    @Test
+    public void Id_12035_ok(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"leitung/12035/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12035/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"leitung/12035/12035_ok.xtf", settings);
+        assertTrue(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        //System.out.println(content);
+        assertFalse(content.contains("Warning"));
+        assertFalse(content.contains("Error"));
+    }
+    
+    @Test
+    public void Id_12036_fail(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"leitung/12036/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12036/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"leitung/12036/12036_fail.xtf", settings);
+        assertFalse(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        //System.out.println(content);
+        assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002001: MANDATORY Verlauf"));
+    }
+
+    @Test
+    public void Id_12036_ok(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"leitung/12036/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12036/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"leitung/12036/12036_ok.xtf", settings);
+        assertTrue(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        //System.out.println(content);
+        assertFalse(content.contains("Warning"));
+        assertFalse(content.contains("Error"));
+    }
+
+    @Test
+    public void Id_12041_fail(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"leitung/12041/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12041/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"leitung/12041/12041_fail.xtf", settings);
+        assertFalse(valid);
+
+        String content = new String(Files.readAllBytes(Paths.get(logFileName)));
+        //System.out.println(content);
+        assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002001: MANDATORY Zustandserhebung_Jahr"));
+    }
+
+    @Test
+    public void Id_12041_ok(@TempDir Path tempDir) throws Exception {
+        String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
+        
+        Settings settings = new Settings();
+        settings.setValue(Validator.SETTING_LOGFILE, logFileName);
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"leitung/12041/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"leitung/12041/config.toml");
+        
+        boolean valid = Validator.runValidation(TEST_IN+"leitung/12041/12041_ok.xtf", settings);
         assertTrue(valid);
 
         String content = new String(Files.readAllBytes(Paths.get(logFileName)));
