@@ -10,16 +10,16 @@ VERSION "2022-02-26"  =
   VIEW TOPIC VSADSSMini_Validierung = 
   DEPENDS ON VSADSSMINI_2020_LV95.VSADSSMini;
   
-	VIEW v_Massnahme
-    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Massnahme;
+	VIEW v_Teileinzugsgebiet
+    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Teileinzugsgebiet;
     =
-        ALL OF Massnahme;
+        ALL OF Teileinzugsgebiet;
                 
-        !!@ name = 13009
-        !!@ ilivalid.msg = "MANDATORY Kategorie AND != #unbekannt"                 
-        MANDATORY CONSTRAINT DEFINED (Kategorie) AND Kategorie != #unbekannt;
+        !!@ name = 17003
+        !!@ ilivalid.msg = "MANDATORY Abflussbeiwert_RW_geplant"                 
+        MANDATORY CONSTRAINT DEFINED (Abflussbeiwert_RW_geplant);
 
-    END v_Massnahme;
+    END v_Teileinzugsgebiet;
         
   END VSADSSMini_Validierung;
 

@@ -1,0 +1,26 @@
+INTERLIS 2.3;
+
+CONTRACTED MODEL VSADSSMINI_2020_LV95_Validierung_IPW (de)
+AT "https://geo.so.ch"
+VERSION "2022-02-26"  =
+  
+  IMPORTS VSADSSMINI_2020_LV95;
+  IMPORTS UNQUALIFIED INTERLIS;
+  
+  VIEW TOPIC VSADSSMini_Validierung = 
+  DEPENDS ON VSADSSMINI_2020_LV95.VSADSSMini;
+  
+	VIEW v_Teileinzugsgebiet
+    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Teileinzugsgebiet;
+    =
+        ALL OF Teileinzugsgebiet;
+                
+        !!@ name = 17018
+        !!@ ilivalid.msg = "MANDATORY Entwaesserungssystem_Ist AND != #unbekannt"                 
+        MANDATORY CONSTRAINT DEFINED (Entwaesserungssystem_Ist) AND Entwaesserungssystem_Ist != #unbekannt;
+
+    END v_Teileinzugsgebiet;
+        
+  END VSADSSMini_Validierung;
+
+END VSADSSMINI_2020_LV95_Validierung_IPW.
