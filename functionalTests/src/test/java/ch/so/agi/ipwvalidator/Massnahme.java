@@ -30,7 +30,7 @@ public class Massnahme {
         assertFalse(valid);
 
         String content = new String(Files.readAllBytes(Paths.get(logFileName)));
-        //System.out.println(content);
+//        System.out.println(content);
         assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Massnahme: tid deg5mQXX20004001: MANDATORY Beschreibung"));
     }
 
@@ -242,8 +242,8 @@ public class Massnahme {
 
         String content = new String(Files.readAllBytes(Paths.get(logFileName)));
         //System.out.println(content);
-        assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Massnahme: tid deg5mQXX20004001: MANDATORY Kategorie AND != unbekannt"));
-        assertTrue(content.contains("Error: line 32: VSADSSMINI_2020_LV95.VSADSSMini.Massnahme: tid deg5mQXX20004002: MANDATORY Kategorie AND != unbekannt"));
+        assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Massnahme: tid deg5mQXX20004001: MANDATORY Kategorie AND != #unbekannt"));
+        assertTrue(content.contains("Error: line 32: VSADSSMINI_2020_LV95.VSADSSMini.Massnahme: tid deg5mQXX20004002: MANDATORY Kategorie AND != #unbekannt"));
     }
 
     @Test
