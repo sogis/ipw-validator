@@ -17,7 +17,7 @@ VERSION "2022-02-26"  =
                 
         !!@ name = 11001
         !!@ ilivalid.msg = "MANDATORY ARA_Nr"                 
-        MANDATORY CONSTRAINT DEFINED(ARA_Nr);
+        MANDATORY CONSTRAINT DEFINED (ARA_Nr);
 
     END v_Knoten;
         

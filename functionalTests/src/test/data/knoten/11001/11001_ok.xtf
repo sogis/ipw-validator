@@ -25,20 +25,11 @@
         <DatenherrRef REF="deg5mQXX20000001"/>
         <DatenlieferantRef REF="deg5mQXX20000001"/>
         <Bezeichnung>Knoten_1</Bezeichnung>
+        <ARA_Nr>5432</ARA_Nr>
         <BetreiberRef REF="deg5mQXX20000001"/>
         <EigentuemerRef REF="deg5mQXX20000001"/>
       </VSADSSMINI_2020_LV95.VSADSSMini.Knoten>
-
-      <VSADSSMINI_2020_LV95.VSADSSMini.Ueberlauf_Foerderaggregat TID="deg5mQXX20009001">
-        <Letzte_Aenderung>20201112</Letzte_Aenderung>
-        <DatenherrRef REF="deg5mQXX20000001"/>
-        <DatenlieferantRef REF="deg5mQXX20000001"/>
-        <Bezeichnung>Ueberlauf_Foerderaggregat_1</Bezeichnung>
-        <Art>Foerderaggregat</Art>
-        <KnotenRef REF="deg5mQXX20001001"/>
-        <Knoten_nachRef REF="deg5mQXX20001001"/>
-      </VSADSSMINI_2020_LV95.VSADSSMini.Ueberlauf_Foerderaggregat>
-
+      
     </VSADSSMINI_2020_LV95.VSADSSMini>
   </DATASECTION>
 </TRANSFER>
