@@ -10,16 +10,16 @@ VERSION "2022-02-26"  =
   VIEW TOPIC VSADSSMini_Validierung = 
   DEPENDS ON VSADSSMINI_2020_LV95.VSADSSMini;
   
-	VIEW v_Knoten
-    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Knoten;
+	VIEW v_Rohrprofil_Geometrie
+    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Rohrprofil_Geometrie;
     =
-        ALL OF Knoten;
+        ALL OF Rohrprofil_Geometrie;
                 
-        !!@ name = 11028
-        !!@ ilivalid.msg = "MANDATORY Zustandserhebung_Jahr OR BaulicherZustand == #unbekannt"                 
-        MANDATORY CONSTRAINT DEFINED (Zustandserhebung_Jahr) OR BaulicherZustand == #unbekannt;
+        !!@ name = 16002
+        !!@ ilivalid.msg = "MANDATORY Reihenfolge"                 
+        MANDATORY CONSTRAINT DEFINED (Reihenfolge);
 
-    END v_Knoten;
+    END v_Rohrprofil_Geometrie;
         
   END VSADSSMini_Validierung;
 

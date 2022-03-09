@@ -582,7 +582,7 @@ public class Knoten {
 
         String content = new String(Files.readAllBytes(Paths.get(logFileName)));
         //System.out.println(content);
-        assertTrue(content.contains("Error: line 21: VSADSSMINI_2020_LV95.VSADSSMini.Knoten: tid deg5mQXX20001001: MANDATORY Zustandserhebung_Jahr"));
+        assertTrue(content.contains("Error: line 32: VSADSSMINI_2020_LV95.VSADSSMini.Knoten: tid deg5mQXX20001002: MANDATORY Zustandserhebung_Jahr OR BaulicherZustand == #unbekannt"));
     }
 
     @Test

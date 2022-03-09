@@ -30,6 +30,27 @@
         <EigentuemerRef REF="deg5mQXX20000001"/>
       </VSADSSMINI_2020_LV95.VSADSSMini.Leitung>
       
+      <VSADSSMINI_2020_LV95.VSADSSMini.Leitung TID="deg5mQXX20002002">
+        <Letzte_Aenderung>20201112</Letzte_Aenderung>
+        <DatenherrRef REF="deg5mQXX20000001"/>
+        <DatenlieferantRef REF="deg5mQXX20000001"/>
+        <Bezeichnung>Leitung_2</Bezeichnung>
+        <BaulicherZustand>unbekannt</BaulicherZustand>
+        <BetreiberRef REF="deg5mQXX20000001"/>
+        <EigentuemerRef REF="deg5mQXX20000001"/>
+      </VSADSSMINI_2020_LV95.VSADSSMini.Leitung>
+      
+      <VSADSSMINI_2020_LV95.VSADSSMini.Leitung TID="deg5mQXX20002003">
+        <Letzte_Aenderung>20201112</Letzte_Aenderung>
+        <DatenherrRef REF="deg5mQXX20000001"/>
+        <DatenlieferantRef REF="deg5mQXX20000001"/>
+        <Bezeichnung>Leitung_3</Bezeichnung>
+        <Zustandserhebung_Jahr>2022</Zustandserhebung_Jahr>
+        <BaulicherZustand>Z0</BaulicherZustand>
+        <BetreiberRef REF="deg5mQXX20000001"/>
+        <EigentuemerRef REF="deg5mQXX20000001"/>
+      </VSADSSMINI_2020_LV95.VSADSSMini.Leitung>
+
     </VSADSSMINI_2020_LV95.VSADSSMini>
   </DATASECTION>
 </TRANSFER>

@@ -19,26 +19,17 @@
         <Organisationstyp>Abwasserverband</Organisationstyp>
         <Status>aktiv</Status>
       </SIA405_Base_Abwasser_LV95.Administration.Organisation>
-      
-      <VSADSSMINI_2020_LV95.VSADSSMini.Leitung TID="deg5mQXX20002001">
-        <Letzte_Aenderung>20201112</Letzte_Aenderung>
-        <DatenherrRef REF="deg5mQXX20000001"/>
-        <DatenlieferantRef REF="deg5mQXX20000001"/>
-        <Bezeichnung>Leitung_1</Bezeichnung>
-        <BetreiberRef REF="deg5mQXX20000001"/>
-        <EigentuemerRef REF="deg5mQXX20000001"/>
-      </VSADSSMINI_2020_LV95.VSADSSMini.Leitung>
 
-      <VSADSSMINI_2020_LV95.VSADSSMini.Leitung TID="deg5mQXX20002002">
+      <VSADSSMINI_2020_LV95.VSADSSMini.Massnahme TID="deg5mQXX20004002">
         <Letzte_Aenderung>20201112</Letzte_Aenderung>
         <DatenherrRef REF="deg5mQXX20000001"/>
         <DatenlieferantRef REF="deg5mQXX20000001"/>
-        <Bezeichnung>Leitung_2</Bezeichnung>
-        <BaulicherZustand>Z0</BaulicherZustand>
-        <BetreiberRef REF="deg5mQXX20000001"/>
-        <EigentuemerRef REF="deg5mQXX20000001"/>
-      </VSADSSMINI_2020_LV95.VSADSSMini.Leitung>
-      
+        <Bezeichnung>Massnahme_2</Bezeichnung>
+        <Kategorie>andere</Kategorie>
+        <Verantwortlich_AusloesungRef REF="deg5mQXX20000001"/>
+        <TraegerschaftRef REF="deg5mQXX20000001"/>
+      </VSADSSMINI_2020_LV95.VSADSSMini.Massnahme>
+
     </VSADSSMINI_2020_LV95.VSADSSMini>
   </DATASECTION>
 </TRANSFER>

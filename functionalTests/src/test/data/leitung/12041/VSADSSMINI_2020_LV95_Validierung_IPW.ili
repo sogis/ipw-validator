@@ -16,8 +16,8 @@ VERSION "2022-02-26"  =
         ALL OF Leitung;
                 
         !!@ name = 12041
-        !!@ ilivalid.msg = "MANDATORY Zustandserhebung_Jahr"                 
-        MANDATORY CONSTRAINT DEFINED(Zustandserhebung_Jahr);
+        !!@ ilivalid.msg = "MANDATORY Zustandserhebung_Jahr OR BaulicherZustand == #unbekannt"                 
+        MANDATORY CONSTRAINT DEFINED (Zustandserhebung_Jahr) OR BaulicherZustand == #unbekannt;
 
     END v_Leitung;
         

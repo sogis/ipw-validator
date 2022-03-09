@@ -814,7 +814,7 @@ public class Leitung {
 
         String content = new String(Files.readAllBytes(Paths.get(logFileName)));
         //System.out.println(content);
-        assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002001: MANDATORY Zustandserhebung_Jahr"));
+        assertTrue(content.contains("Error: line 32: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002002: MANDATORY Zustandserhebung_Jahr OR BaulicherZustand == #unbekannt"));
     }
 
     @Test

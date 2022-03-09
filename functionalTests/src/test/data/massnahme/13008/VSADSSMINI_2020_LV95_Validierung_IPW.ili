@@ -10,16 +10,16 @@ VERSION "2022-02-26"  =
   VIEW TOPIC VSADSSMini_Validierung = 
   DEPENDS ON VSADSSMINI_2020_LV95.VSADSSMini;
   
-	VIEW v_Knoten
-    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Knoten;
+	VIEW v_Massnahme
+    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Massnahme;
     =
-        ALL OF Knoten;
+        ALL OF Massnahme;
                 
-        !!@ name = 11028
-        !!@ ilivalid.msg = "MANDATORY Zustandserhebung_Jahr OR BaulicherZustand == #unbekannt"                 
-        MANDATORY CONSTRAINT DEFINED (Zustandserhebung_Jahr) OR BaulicherZustand == #unbekannt;
+        !!@ name = 13008
+        !!@ ilivalid.msg = "MANDATORY Jahr_Umsetzung_geplant"                 
+        MANDATORY CONSTRAINT DEFINED (Jahr_Umsetzung_geplant);
 
-    END v_Knoten;
+    END v_Massnahme;
         
   END VSADSSMini_Validierung;
 
