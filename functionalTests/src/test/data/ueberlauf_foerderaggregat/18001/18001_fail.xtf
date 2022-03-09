@@ -34,11 +34,10 @@
         <DatenherrRef REF="deg5mQXX20000001"/>
         <DatenlieferantRef REF="deg5mQXX20000001"/>
         <Bezeichnung>Ueberlauf_Foerderaggregat_1</Bezeichnung>
-        <Art>Foerderaggregat</Art>
         <KnotenRef REF="deg5mQXX20001001"/>
         <Knoten_nachRef REF="deg5mQXX20001001"/>
       </VSADSSMINI_2020_LV95.VSADSSMini.Ueberlauf_Foerderaggregat>
-
+      
     </VSADSSMINI_2020_LV95.VSADSSMini>
   </DATASECTION>
 </TRANSFER>

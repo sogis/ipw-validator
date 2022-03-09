@@ -10,16 +10,16 @@ VERSION "2022-02-26"  =
   VIEW TOPIC VSADSSMini_Validierung = 
   DEPENDS ON VSADSSMINI_2020_LV95.VSADSSMini;
   
-	VIEW v_Massnahme
-    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Massnahme;
+	VIEW v_Ueberlauf_Foerderaggregat
+    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Ueberlauf_Foerderaggregat;
     =
-        ALL OF Massnahme;
+        ALL OF Ueberlauf_Foerderaggregat;
                 
-        !!@ name = 13002
-        !!@ ilivalid.msg = "MANDATORY Beschreibung"                 
-        MANDATORY CONSTRAINT DEFINED (Beschreibung);
+        !!@ name = 18001
+        !!@ ilivalid.msg = "MANDATORY Art"                 
+        MANDATORY CONSTRAINT DEFINED (Art);
 
-    END v_Massnahme;
+    END v_Ueberlauf_Foerderaggregat;
         
   END VSADSSMini_Validierung;
 

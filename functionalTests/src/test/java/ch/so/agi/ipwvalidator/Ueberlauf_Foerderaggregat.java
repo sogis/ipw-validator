@@ -13,37 +13,37 @@ import org.junit.jupiter.api.io.TempDir;
 
 import ch.ehi.basics.settings.Settings;
 
-public class Massnahme {
+public class Ueberlauf_Foerderaggregat {
     private static final String TEST_IN = "src/test/data/";
     private static final String LOGFILE_NAME = "ilivalidator.log";
 
     @Test
-    public void Id_13002_fail(@TempDir Path tempDir) throws Exception {
+    public void Id_18001_fail(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
         
         Settings settings = new Settings();
         settings.setValue(Validator.SETTING_LOGFILE, logFileName);
-        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"massnahme/13002/");
-        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"massnahme/13002/config.toml");
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"ueberlauf_foerderaggregat/18001/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"ueberlauf_foerderaggregat/18001/config.toml");
         
-        boolean valid = Validator.runValidation(TEST_IN+"massnahme/13002/13002_fail.xtf", settings);
+        boolean valid = Validator.runValidation(TEST_IN+"ueberlauf_foerderaggregat/18001/18001_fail.xtf", settings);
         assertFalse(valid);
 
         String content = new String(Files.readAllBytes(Paths.get(logFileName)));
         //System.out.println(content);
-        assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Massnahme: tid deg5mQXX20004001: MANDATORY Beschreibung"));
+        assertTrue(content.contains("Error: line 32: VSADSSMINI_2020_LV95.VSADSSMini.Ueberlauf_Foerderaggregat: tid deg5mQXX20009001: MANDATORY Art"));
     }
 
     @Test
-    public void Id_13002_ok(@TempDir Path tempDir) throws Exception {
+    public void Id_18001_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
         
         Settings settings = new Settings();
         settings.setValue(Validator.SETTING_LOGFILE, logFileName);
-        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"massnahme/13002/");
-        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"massnahme/13002/config.toml");
+        settings.setValue(Validator.SETTING_ILIDIRS, TEST_IN+"models/;"+TEST_IN+"ueberlauf_foerderaggregat/18001/");
+        settings.setValue(Validator.SETTING_CONFIGFILE, TEST_IN+"ueberlauf_foerderaggregat/18001/config.toml");
         
-        boolean valid = Validator.runValidation(TEST_IN+"massnahme/13002/13002_ok.xtf", settings);
+        boolean valid = Validator.runValidation(TEST_IN+"ueberlauf_foerderaggregat/18001/18001_ok.xtf", settings);
         assertTrue(valid);
 
         String content = new String(Files.readAllBytes(Paths.get(logFileName)));
