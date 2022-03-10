@@ -16,7 +16,7 @@ VERSION "2022-02-26"  =
         ALL OF Ueberlauf_Foerderaggregat;
                 
         !!@ name = 18001
-        !!@ ilivalid.msg = "MANDATORY Art"                 
+        !!@ ilivalid.msg = "MANDATORY Art"
         MANDATORY CONSTRAINT DEFINED (Art);
 
     END v_Ueberlauf_Foerderaggregat;
