@@ -22,13 +22,17 @@ Das Validierungsmodell wird in der INTERLIS-Modellablage des Kantons Solothurn g
 
 Ilivalidator:
 ```
-
+java -jar ilivalidator.jar --config config.toml --modeldir "path/to/VSADSSMINI_2020_LV95_Validierung_IPW_20220310.ili;https://vsa.ch/models;http://models.geo.admin.ch"
 ```
+
+`path/to/...` ist überflüssig, wenn das Validierungsmodell in einer Modellablage vorhanden ist.
 
 Ili2pg:
 ```
-
+java -jar ili2pg.jar --validConfig config.toml --modeldir "path/to/VSADSSMINI_2020_LV95_Validierung_IPW_20220310.ili;https://vsa.ch/models;http://models.geo.admin.ch" ...
 ```
+Siehe Kommentar _ilivalidator_.
+
 
 ## todo
 - BetreiberRef (o.ä.): see https://github.com/claeis/ilivalidator/issues/337 -> @Disabled
