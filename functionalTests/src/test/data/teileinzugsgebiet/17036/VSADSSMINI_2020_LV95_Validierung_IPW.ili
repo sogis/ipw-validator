@@ -10,16 +10,16 @@ VERSION "2022-02-26"  =
   VIEW TOPIC VSADSSMini_Validierung = 
   DEPENDS ON VSADSSMINI_2020_LV95.VSADSSMini;
   
-	VIEW v_Leitung
-    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Leitung;
+	VIEW v_Teileinzugsgebiet
+    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Teileinzugsgebiet;
     =
-        ALL OF Leitung;
+        ALL OF Teileinzugsgebiet;
                 
-        !!@ name = 12013
-        !!@ ilivalid.msg = "MANDATORY Knoten_nachRef (gilt für PAA)"
-        MANDATORY CONSTRAINT INTERLIS.objectCount(Knoten_nachRef) == 1 OR isEnumSubVal(FunktionHierarchisch, #SAA);
+        !!@ name = 17036
+        !!@ ilivalid.msg = "MANDATORY TextPos"                 
+        MANDATORY CONSTRAINT DEFINED(TextPos);
 
-    END v_Leitung;
+    END v_Teileinzugsgebiet;
         
   END VSADSSMini_Validierung;
 
