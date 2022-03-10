@@ -1,0 +1,26 @@
+INTERLIS 2.3;
+
+CONTRACTED MODEL VSADSSMINI_2020_LV95_Validierung_IPW (de)
+AT "https://geo.so.ch"
+VERSION "2022-02-26"  =
+  
+  IMPORTS VSADSSMINI_2020_LV95;
+  IMPORTS UNQUALIFIED INTERLIS;
+  
+  VIEW TOPIC VSADSSMini_Validierung = 
+  DEPENDS ON VSADSSMINI_2020_LV95.VSADSSMini;
+  
+	VIEW v_Kennlinie_Stuetzpunkt
+    	PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Kennlinie_Stuetzpunkt;
+    =
+        ALL OF Kennlinie_Stuetzpunkt;
+                
+        !!@ name = 19901
+        !!@ ilivalid.msg = "Kein Kennlinie_Stuetzpunkt erlaubt"                 
+        SET CONSTRAINT INTERLIS.objectCount(ALL)==0; 
+        
+    END v_Kennlinie_Stuetzpunkt;
+        
+  END VSADSSMini_Validierung;
+
+END VSADSSMINI_2020_LV95_Validierung_IPW.
