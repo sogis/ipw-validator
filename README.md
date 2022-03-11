@@ -1,6 +1,6 @@
 # ipw-validator
 
-Zusätzliche Validierungen / Constraints für das Datenmodell `VSADSSMINI_2020_LV95` im Kontext der Informationsplattform Wasser (IPW). Als Prüfsoftware wird _ilivalidator_ **(>= 1.11.??)** verwendet. Für jeden zusätzlichen Constraint gibt es einen eigenen Test. 
+Zusätzliche Validierungen / Constraints für das Datenmodell `VSADSSMINI_2020_LV95` im Kontext der Informationsplattform Wasser (IPW). Als Prüfsoftware wird _ilivalidator_ **(>= 1.11.??)** verwendet. Für jeden zusätzlichen Constraint gibt es eigene Test. 
 
 ## Test
 ```
@@ -36,7 +36,5 @@ Siehe Kommentar _ilivalidator_.
 
 ## todo
 - BetreiberRef (o.ä.): see https://github.com/claeis/ilivalidator/issues/337 -> @Disabled
-- Constraint gewünscht damit keine Organisationen geliefert werden?
-- Constraint gewünscht damit keine Sonderbauwerke geliefert werden?
 - Status: Probleme wegen ALL OF Issue. Falls Status vorhanden ist und unbekannt, wird keine Fehler gemeldet. see https://github.com/claeis/ilivalidator/issues/300 -> @Disabled
-- jreleaser...
+- jreleaser?
