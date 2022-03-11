@@ -2,6 +2,8 @@
 
 Zusätzliche Validierungen / Constraints für das Datenmodell `VSADSSMINI_2020_LV95` im Kontext der Informationsplattform Wasser (IPW). Als Prüfsoftware wird _ilivalidator_ **(>= 1.11.??)** verwendet. Für jeden zusätzlichen Constraint gibt es eigene Test. 
 
+Ausgangslage: https://docs.google.com/spreadsheets/d/1Ia55bWhrek2DpN3L3c2DklxRXWDycwb6/edit#gid=1821209344 (Excelfile)
+
 ## Test
 ```
 ./gradlew clean test
