@@ -354,7 +354,7 @@ public class Teileinzugsgebiet {
         assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Teileinzugsgebiet: tid deg5mQXX20009001: MANDATORY Knoten_RW_geplantRef"));
     }
 
-    @Disabled
+    //@Disabled
     @Test
     public void Id_17022_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
@@ -390,7 +390,7 @@ public class Teileinzugsgebiet {
         assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Teileinzugsgebiet: tid deg5mQXX20009001: MANDATORY Knoten_RW_IstRef"));
     }
 
-    @Disabled
+    //@Disabled
     @Test
     public void Id_17023_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
@@ -426,7 +426,7 @@ public class Teileinzugsgebiet {
         assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Teileinzugsgebiet: tid deg5mQXX20009001: MANDATORY Knoten_SW_geplantRef"));
     }
 
-    @Disabled
+    //@Disabled
     @Test
     public void Id_17024_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
@@ -462,7 +462,7 @@ public class Teileinzugsgebiet {
         assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Teileinzugsgebiet: tid deg5mQXX20009001: MANDATORY Knoten_SW_IstRef"));
     }
 
-    @Disabled
+    //@Disabled
     @Test
     public void Id_17025_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();

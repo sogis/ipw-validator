@@ -31,7 +31,7 @@ jobs:
         run: ./gradlew clean functionalTests:build
 
       - uses: actions/upload-artifact@v2
-        if: ${{ failure() }}
+        #if: ${{ failure() }}
         with:
           name: reports
           path: functionalTests/build/reports/tests/

@@ -40,9 +40,9 @@ IMPORTS UNQUALIFIED INTERLIS;
       !!@ ilivalid.msg = "MANDATORY Nutzungsart_Ist AND != unbekannt"
       MANDATORY CONSTRAINT DEFINED(Nutzungsart_Ist) AND Nutzungsart_Ist != #unbekannt;
 
-      !! !!@ name = 11025
-      !! !!@ ilivalid.msg = "MANDATORY Status AND != unbekannt"
-      !! MANDATORY CONSTRAINT DEFINED(Status) AND Status != #unbekannt;
+      !!@ name = 11025
+      !!@ ilivalid.msg = "MANDATORY Status AND != unbekannt"
+      MANDATORY CONSTRAINT DEFINED(Status) AND Status != #unbekannt;
 
     END v_Knoten;
 
@@ -63,13 +63,13 @@ IMPORTS UNQUALIFIED INTERLIS;
       !!@ ilivalid.msg = "MANDATORY FunktionHydraulisch AND != unbekannt"
       MANDATORY CONSTRAINT DEFINED(FunktionHydraulisch) AND FunktionHydraulisch != #unbekannt;
 
-      !! !!@ name = 12013
-      !! !!@ ilivalid.msg = "MANDATORY Knoten_nachRef (gilt für PAA)"
-      !! MANDATORY CONSTRAINT INTERLIS.objectCount(Knoten_nachRef) == 1 OR isEnumSubVal(FunktionHierarchisch, #SAA);
+      !!@ name = 12013
+      !!@ ilivalid.msg = "MANDATORY Knoten_nachRef (gilt für PAA)"
+      MANDATORY CONSTRAINT INTERLIS.objectCount(Knoten_nachRef) == 1 OR isEnumSubVal(FunktionHierarchisch, #SAA);
 
-      !! !!@ name = 12014
-      !! !!@ ilivalid.msg = "MANDATORY Knoten_vonRef (gilt für PAA)"
-      !! MANDATORY CONSTRAINT INTERLIS.objectCount(Knoten_vonRef)==1 OR isEnumSubVal(FunktionHierarchisch,#SAA);
+      !!@ name = 12014
+      !!@ ilivalid.msg = "MANDATORY Knoten_vonRef (gilt für PAA)"
+      MANDATORY CONSTRAINT INTERLIS.objectCount(Knoten_vonRef)==1 OR isEnumSubVal(FunktionHierarchisch,#SAA);
 
       !!@ name = 12021
       !!@ ilivalid.msg = "MANDATORY Lichte_Breite (gilt für PAA)"
@@ -87,9 +87,9 @@ IMPORTS UNQUALIFIED INTERLIS;
       !!@ ilivalid.msg = "MANDATORY Profiltyp (gilt für PAA)"
       MANDATORY CONSTRAINT DEFINED(Profiltyp) OR isEnumSubVal(FunktionHierarchisch,#SAA);
 
-      !! !!@ name = 12035
-      !! !!@ ilivalid.msg = "MANDATORY Status AND != unbekannt"
-      !! MANDATORY CONSTRAINT DEFINED(Status) AND Status != #unbekannt;
+      !!@ name = 12035
+      !!@ ilivalid.msg = "MANDATORY Status AND != unbekannt"
+      MANDATORY CONSTRAINT DEFINED(Status) AND Status != #unbekannt;
 
       !!@ name = 12036
       !!@ ilivalid.msg = "MANDATORY Verlauf"

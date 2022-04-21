@@ -105,7 +105,7 @@ public class Leitung {
         assertTrue(content.contains("Error: line 23: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002001: MANDATORY BetreiberRef"));
     }
 
-    @Disabled
+    //@Disabled
     @Test
     public void Id_12004_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
@@ -250,7 +250,7 @@ public class Leitung {
         assertTrue(content.contains("Error: line 41: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002002: MANDATORY Knoten_nachRef (gilt für PAA)"));
     }
     
-    @Disabled
+    //@Disabled
     @Test
     public void Id_12013_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
@@ -286,7 +286,7 @@ public class Leitung {
         assertTrue(content.contains("Error: line 41: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002002: MANDATORY Knoten_vonRef (gilt für PAA)"));
     }
     
-    @Disabled
+    //@Disabled
     @Test
     public void Id_12014_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
@@ -727,7 +727,7 @@ public class Leitung {
         assertFalse(content.contains("Error"));
     }
     
-    @Disabled
+    //@Disabled
     @Test
     public void Id_12035_fail(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
@@ -746,7 +746,7 @@ public class Leitung {
 //        assertTrue(content.contains("Error: line 32: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002002: MANDATORY Nutzungsart_Ist AND != unbekannt"));
     }
 
-    @Disabled
+    //@Disabled
     @Test
     public void Id_12035_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();

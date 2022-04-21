@@ -41,8 +41,8 @@
         <DatenherrRef REF="deg5mQXX20000001"/>
         <DatenlieferantRef REF="deg5mQXX20000001"/>
         <Bezeichnung>ALR_2</Bezeichnung>
-        <MassnahmeRef>ALR_2</MassnahmeRef>
-        <Sanierungsbedarf REF="deg5mQXX20004001"/>
+        <MassnahmeRef REF="deg5mQXX20004001"/>
+        <Sanierungsbedarf>ja</Sanierungsbedarf>
       </VSADSSMINI_2020_LV95.VSADSSMini.ALR>
 
       <VSADSSMINI_2020_LV95.VSADSSMini.ALR TID="deg5mQXX20008003">

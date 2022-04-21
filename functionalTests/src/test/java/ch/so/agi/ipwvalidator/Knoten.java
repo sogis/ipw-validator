@@ -135,7 +135,7 @@ public class Knoten {
         assertTrue(content.contains("Error: line 21: VSADSSMINI_2020_LV95.VSADSSMini.Knoten: tid deg5mQXX20001001: MANDATORY BetreiberRef"));
     }
     
-    @Disabled
+    //@Disabled
     @Test
     public void Id_11005_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
@@ -529,7 +529,7 @@ public class Knoten {
         assertFalse(content.contains("Error"));
     }    
 
-    @Disabled
+    //@Disabled
     @Test
     public void Id_11025_fail(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
@@ -547,7 +547,7 @@ public class Knoten {
         assertTrue(content.contains("Error: line 22: VSADSSMINI_2020_LV95.VSADSSMini.Knoten: tid deg5mQXX20001001: MANDATORY Status AND != unbekannt"));
     }
 
-    @Disabled
+    //@Disabled
     @Test
     public void Id_11025_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();

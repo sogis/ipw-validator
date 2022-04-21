@@ -140,7 +140,7 @@ public class ALR {
         assertTrue(content.contains("Error: line 39: VSADSSMINI_2020_LV95.VSADSSMini.ALR: tid deg5mQXX20008002: MANDATORY MassnahmeRef OR Sanierungsbedarf != #ja"));
     }
 
-    @Disabled
+    //@Disabled
     @Test
     public void Id_10005_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
@@ -154,7 +154,6 @@ public class ALR {
         assertTrue(valid);
 
         String content = new String(Files.readAllBytes(Paths.get(logFileName)));
-        //System.out.println(content);
         assertFalse(content.contains("Warning"));
         assertFalse(content.contains("Error"));
     }
@@ -177,7 +176,7 @@ public class ALR {
         assertTrue(content.contains("Error: line 30: VSADSSMINI_2020_LV95.VSADSSMini.ALR: tid deg5mQXX20008002: MANDATORY Sanierungsbedarf AND != #unbekannt"));
     }
 
-    @Disabled
+    //@Disabled
     @Test
     public void Id_10012_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
@@ -191,7 +190,6 @@ public class ALR {
         assertTrue(valid);
 
         String content = new String(Files.readAllBytes(Paths.get(logFileName)));
-        //System.out.println(content);
         assertFalse(content.contains("Warning"));
         assertFalse(content.contains("Error"));
     }

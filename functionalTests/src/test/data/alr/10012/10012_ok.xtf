@@ -20,13 +20,6 @@
         <Status>aktiv</Status>
       </SIA405_Base_Abwasser_LV95.Administration.Organisation>
 
-      <VSADSSMINI_2020_LV95.VSADSSMini.ALR TID="deg5mQXX20008001">
-        <Letzte_Aenderung>20201112</Letzte_Aenderung>
-        <DatenherrRef REF="deg5mQXX20000001"/>
-        <DatenlieferantRef REF="deg5mQXX20000001"/>
-        <Bezeichnung>ALR_1</Bezeichnung>
-      </VSADSSMINI_2020_LV95.VSADSSMini.ALR>
-
       <VSADSSMINI_2020_LV95.VSADSSMini.ALR TID="deg5mQXX20008002">
         <Letzte_Aenderung>20201112</Letzte_Aenderung>
         <DatenherrRef REF="deg5mQXX20000001"/>
