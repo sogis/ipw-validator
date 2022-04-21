@@ -36,10 +36,6 @@ IMPORTS UNQUALIFIED INTERLIS;
       !!@ ilivalid.msg = "MANDATORY Lage"
       MANDATORY CONSTRAINT DEFINED(Lage);
 
-      !!@ name = 11016
-      !!@ ilivalid.msg = "MANDATORY Lagegenauigkeit"
-      MANDATORY CONSTRAINT DEFINED(Lagegenauigkeit);
-
       !!@ name = 11018
       !!@ ilivalid.msg = "MANDATORY Nutzungsart_Ist AND != unbekannt"
       MANDATORY CONSTRAINT DEFINED(Nutzungsart_Ist) AND Nutzungsart_Ist != #unbekannt;
