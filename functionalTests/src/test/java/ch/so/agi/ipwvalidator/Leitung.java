@@ -233,6 +233,7 @@ public class Leitung {
         assertFalse(content.contains("Error"));
     }
     
+    @Disabled
     @Test
     public void Id_12013_fail(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
@@ -250,7 +251,7 @@ public class Leitung {
         assertTrue(content.contains("Error: line 41: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002002: MANDATORY Knoten_nachRef (gilt für PAA)"));
     }
     
-    //@Disabled
+    @Disabled
     @Test
     public void Id_12013_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
@@ -269,6 +270,7 @@ public class Leitung {
         assertFalse(content.contains("Error"));
     }
 
+    @Disabled
     @Test
     public void Id_12014_fail(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
@@ -286,7 +288,7 @@ public class Leitung {
         assertTrue(content.contains("Error: line 41: VSADSSMINI_2020_LV95.VSADSSMini.Leitung: tid deg5mQXX20002002: MANDATORY Knoten_vonRef (gilt für PAA)"));
     }
     
-    //@Disabled
+    @Disabled
     @Test
     public void Id_12014_ok(@TempDir Path tempDir) throws Exception {
         String logFileName = Paths.get(tempDir.toFile().getAbsolutePath(), LOGFILE_NAME).toFile().getAbsolutePath();
