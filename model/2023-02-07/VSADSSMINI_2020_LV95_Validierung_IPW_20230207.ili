@@ -17,31 +17,31 @@ IMPORTS UNQUALIFIED INTERLIS;
       ALL OF Knoten;
 
       !!@ name = 11012
-      !!@ ilivalid.msg = "MANDATORY Finanzierung"
+      !!@ ilivalid.msg = "Knoten: MANDATORY Finanzierung"
       MANDATORY CONSTRAINT DEFINED(Finanzierung);
 
       !!@ name = 11013
-      !!@ ilivalid.msg = "MANDATORY Funktion"
+      !!@ ilivalid.msg = "Knoten: MANDATORY Funktion"
       MANDATORY CONSTRAINT DEFINED(Funktion);
 
       !!@ name = 11014
-      !!@ ilivalid.msg = "MANDATORY FunktionHierarchisch"
+      !!@ ilivalid.msg = "Knoten: MANDATORY FunktionHierarchisch"
       MANDATORY CONSTRAINT DEFINED(FunktionHierarchisch);
 
       !!@ name = 11015
-      !!@ ilivalid.msg = "MANDATORY Lage"
+      !!@ ilivalid.msg = "Knoten: MANDATORY Lage"
       MANDATORY CONSTRAINT DEFINED(Lage);
 
       !!@ name = 11025
-      !!@ ilivalid.msg = "MANDATORY Status"
+      !!@ ilivalid.msg = "Knoten: MANDATORY Status"
       MANDATORY CONSTRAINT DEFINED(Status);
 
       !!@ name = 11101
-      !!@ ilivalid.msg = "weniger als 80% Finanzierung erfasst"
+      !!@ ilivalid.msg = "Knoten: weniger als 80% Finanzierung erfasst"
       CONSTRAINT >= 80% DEFINED(Finanzierung);
 
       !!@ name = 11102
-      !!@ ilivalid.msg = "weniger als 90% Status erfasst"
+      !!@ ilivalid.msg = "Knoten: weniger als 90% Status erfasst"
       CONSTRAINT >= 90% DEFINED(Status);
 
     END v_Knoten;
@@ -52,39 +52,39 @@ IMPORTS UNQUALIFIED INTERLIS;
       ALL OF Leitung;
 
       !!@ name = 12007
-      !!@ ilivalid.msg = "MANDATORY Finanzierung"
+      !!@ ilivalid.msg = "Leitung: MANDATORY Finanzierung"
       MANDATORY CONSTRAINT DEFINED(Finanzierung);
 
       !!@ name = 12008
-      !!@ ilivalid.msg = "MANDATORY FunktionHierarchisch"
+      !!@ ilivalid.msg = "Leitung: MANDATORY FunktionHierarchisch"
       MANDATORY CONSTRAINT DEFINED(FunktionHierarchisch);
 
       !!@ name = 12009
-      !!@ ilivalid.msg = "MANDATORY FunktionHydraulisch"
+      !!@ ilivalid.msg = "Leitung: MANDATORY FunktionHydraulisch"
       MANDATORY CONSTRAINT DEFINED(FunktionHydraulisch);
 
       !!@ name = 12025
-      !!@ ilivalid.msg = "MANDATORY Nutzungsart_Ist AND != unbekannt"
+      !!@ ilivalid.msg = "Leitung: MANDATORY Nutzungsart_Ist AND != unbekannt"
       MANDATORY CONSTRAINT DEFINED(Nutzungsart_Ist) AND Nutzungsart_Ist != #unbekannt;
 
       !!@ name = 12035
-      !!@ ilivalid.msg = "MANDATORY Status"
+      !!@ ilivalid.msg = "Leitung: MANDATORY Status"
       MANDATORY CONSTRAINT DEFINED(Status);
 
       !!@ name = 12036
-      !!@ ilivalid.msg = "MANDATORY Verlauf"
+      !!@ ilivalid.msg = "Leitung: MANDATORY Verlauf"
       MANDATORY CONSTRAINT DEFINED(Verlauf);
 
       !!@ name = 12101
-      !!@ ilivalid.msg = "weniger als 80% Finanzierung erfasst"
+      !!@ ilivalid.msg = "Leitung: weniger als 80% Finanzierung erfasst"
       CONSTRAINT >= 80% DEFINED(Finanzierung);
 
       !!@ name = 12102
-      !!@ ilivalid.msg = "weniger als 90% Nutzungsart erfasst"
+      !!@ ilivalid.msg = "Leitung: weniger als 90% Nutzungsart erfasst"
       CONSTRAINT >= 90% DEFINED(Nutzungsart_Ist);
 
       !!@ name = 12103
-      !!@ ilivalid.msg = "weniger als 90% Status erfasst"
+      !!@ ilivalid.msg = "Leitung: weniger als 90% Status erfasst"
       CONSTRAINT >= 90% DEFINED(Status);
 
     END v_Leitung;
