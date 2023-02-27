@@ -116,8 +116,8 @@ IMPORTS UNQUALIFIED INTERLIS;
       =
       ALL OF Kennlinie_Stuetzpunkt;
 
-      !!@ name = 19901
       !!@ ilivalid.msg = "Kein Kennlinie_Stuetzpunkt erlaubt"
+      !!@ name = 20901
       SET CONSTRAINT INTERLIS.objectCount(ALL)==0; 
 
     END v_Kennlinie_Stuetzpunkt;
