@@ -95,7 +95,7 @@ IMPORTS UNQUALIFIED INTERLIS;
       ALL OF Organisation;
 
       !!@ name = 14901
-      !!@ ilivalid.msg = "Keine Organisation erlaubt"
+      !!@ ilivalid.msg = "Zusätzliche Organisationen werden ignoriert"
       SET CONSTRAINT INTERLIS.objectCount(ALL)==0; 
 
     END v_Organisation;
@@ -106,7 +106,7 @@ IMPORTS UNQUALIFIED INTERLIS;
       ALL OF Bauwerkskomponente;
 
       !!@ name = 19901
-      !!@ ilivalid.msg = "Keine Bauwerkskomponente erlaubt"
+      !!@ ilivalid.msg = "Bauwerkskomponente wird ignoriert"
       SET CONSTRAINT INTERLIS.objectCount(ALL)==0; 
 
     END v_Bauwerkskomponente;
@@ -116,8 +116,8 @@ IMPORTS UNQUALIFIED INTERLIS;
       =
       ALL OF Kennlinie_Stuetzpunkt;
 
-      !!@ ilivalid.msg = "Kein Kennlinie_Stuetzpunkt erlaubt"
       !!@ name = 20901
+      !!@ ilivalid.msg = "Kennlinie_Stuetzpunkt wird ignoriert"
       SET CONSTRAINT INTERLIS.objectCount(ALL)==0; 
 
     END v_Kennlinie_Stuetzpunkt;
@@ -128,7 +128,7 @@ IMPORTS UNQUALIFIED INTERLIS;
       ALL OF SK_Duekeroberhaupt;
 
       !!@ name = 22901
-      !!@ ilivalid.msg = "Keine SK_Duekeroberhaupt erlaubt"
+      !!@ ilivalid.msg = "SK_Duekeroberhaupt: Stammkarten werden ignoriert"
       SET CONSTRAINT INTERLIS.objectCount(ALL)==0; 
 
     END v_SK_Duekeroberhaupt;
@@ -139,7 +139,7 @@ IMPORTS UNQUALIFIED INTERLIS;
       ALL OF SK_Einleitstelle;
 
       !!@ name = 23901
-      !!@ ilivalid.msg = "Keine SK_Einleitstelle erlaubt"
+      !!@ ilivalid.msg = "SK_Einleitstelle: Stammkarten werden ignoriert"
       SET CONSTRAINT INTERLIS.objectCount(ALL)==0; 
 
     END v_SK_Einleitstelle;
@@ -150,7 +150,7 @@ IMPORTS UNQUALIFIED INTERLIS;
       ALL OF SK_Pumpwerk;
                 
       !!@ name = 24901
-      !!@ ilivalid.msg = "Keine SK_Pumpwerk erlaubt"
+      !!@ ilivalid.msg = "SK_Pumpwerk: Stammkarten werden ignoriert"
       SET CONSTRAINT INTERLIS.objectCount(ALL)==0; 
 
     END v_SK_Pumpwerk;
@@ -161,7 +161,7 @@ IMPORTS UNQUALIFIED INTERLIS;
       ALL OF SK_Regenrueckhaltebecken_kanal;
 
       !!@ name = 25901
-      !!@ ilivalid.msg = "Keine SK_Regenrueckhaltebecken_kanal erlaubt"
+      !!@ ilivalid.msg = "SK_Regenrueckhaltebecken_kanal: Stammkarten werden ignoriert"
       SET CONSTRAINT INTERLIS.objectCount(ALL)==0; 
 
     END v_SK_Regenrueckhaltebecken_kanal;
@@ -172,7 +172,7 @@ IMPORTS UNQUALIFIED INTERLIS;
       ALL OF SK_Regenueberlauf;
 
       !!@ name = 26901
-      !!@ ilivalid.msg = "Keine SK_Regenueberlauf erlaubt"
+      !!@ ilivalid.msg = "SK_Regenueberlauf: Stammkarten werden ignoriert"
       SET CONSTRAINT INTERLIS.objectCount(ALL)==0; 
 
     END v_SK_Regenueberlauf;
@@ -183,7 +183,7 @@ IMPORTS UNQUALIFIED INTERLIS;
       ALL OF SK_Regenueberlaufbecken;
 
       !!@ name = 27901
-      !!@ ilivalid.msg = "Keine SK_Regenueberlaufbecken erlaubt"
+      !!@ ilivalid.msg = "SK_Regenueberlaufbecken: Stammkarten werden ignoriert"
       SET CONSTRAINT INTERLIS.objectCount(ALL)==0; 
 
     END v_SK_Regenueberlaufbecken;
@@ -194,7 +194,7 @@ IMPORTS UNQUALIFIED INTERLIS;
       ALL OF SK_Trennbauwerk;
 
       !!@ name = 28901
-      !!@ ilivalid.msg = "Keine SK_Trennbauwerk erlaubt"
+      !!@ ilivalid.msg = "SK_Trennbauwerk: Stammkarten werden ignoriert"
       SET CONSTRAINT INTERLIS.objectCount(ALL)==0; 
 
     END v_SK_Trennbauwerk;
@@ -205,7 +205,7 @@ IMPORTS UNQUALIFIED INTERLIS;
       ALL OF SK_Uebrige;
 
       !!@ name = 29901
-      !!@ ilivalid.msg = "Keine SK_Uebrige erlaubt"
+      !!@ ilivalid.msg = "SK_Uebrige: Stammkarten werden ignoriert"
       SET CONSTRAINT INTERLIS.objectCount(ALL)==0; 
       
     END v_SK_Uebrige;
