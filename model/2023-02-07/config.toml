@@ -30,6 +30,54 @@ check="warning"
 check="warning"
 
 ##
+## Warnungen für SET CONSTRAINTS
+##
+
+# Organisation
+["VSADSSMINI_2020_LV95_Validierung_IPW_20230207.VSADSSMini_Validierung.v_Organisation.14901"]
+check="warning"
+
+# Bauwerkskomponente
+["VSADSSMINI_2020_LV95_Validierung_IPW_20230207.VSADSSMini_Validierung.v_Bauwerkskomponente.19901"]
+check="warning"
+
+# Kennlinie_Stuetzpunkt
+["VSADSSMINI_2020_LV95_Validierung_IPW_20230207.VSADSSMini_Validierung.v_Kennlinie_Stuetzpunkt.20901"]
+check="warning"
+
+# SK_Duekeroberhaupt
+["VSADSSMINI_2020_LV95_Validierung_IPW_20230207.VSADSSMini_Validierung.v_SK_Duekeroberhaupt.22901"]
+check="warning"
+
+# SK_Einleitstelle
+["VSADSSMINI_2020_LV95_Validierung_IPW_20230207.VSADSSMini_Validierung.v_SK_Einleitstelle.23901"]
+check="warning"
+
+# SK_Pumpwerk
+["VSADSSMINI_2020_LV95_Validierung_IPW_20230207.VSADSSMini_Validierung.v_SK_Pumpwerk.24901"]
+check="warning"
+
+# SK_Regenrueckhaltebecken_kanal
+["VSADSSMINI_2020_LV95_Validierung_IPW_20230207.VSADSSMini_Validierung.v_SK_Regenrueckhaltebecken_kanal.25901"]
+check="warning"
+
+# SK_Regenueberlauf
+["VSADSSMINI_2020_LV95_Validierung_IPW_20230207.VSADSSMini_Validierung.v_SK_Regenueberlauf.26901"]
+check="warning"
+
+# SK_Regenueberlaufbecken
+["VSADSSMINI_2020_LV95_Validierung_IPW_20230207.VSADSSMini_Validierung.v_SK_Regenueberlaufbecken.27901"]
+check="warning"
+
+# SK_Trennbauwerk
+["VSADSSMINI_2020_LV95_Validierung_IPW_20230207.VSADSSMini_Validierung.v_SK_Trennbauwerk.28901"]
+check="warning"
+
+# SK_Uebrige
+["VSADSSMINI_2020_LV95_Validierung_IPW_20230207.VSADSSMini_Validierung.v_SK_Uebrige.29901"]
+check="warning"
+
+##
 ## Validierung Rohrprofil deaktivieren
 ##
 
