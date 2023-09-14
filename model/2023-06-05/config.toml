@@ -33,10 +33,6 @@ check="warning"
 ## Warnungen für SET CONSTRAINTS
 ##
 
-# Organisation
-["VSADSSMINI_2020_LV95_Validierung_IPW_20230605.VSADSSMini_Validierung.v_Organisation.14901"]
-check="warning"
-
 # Bauwerkskomponente
 ["VSADSSMINI_2020_LV95_Validierung_IPW_20230605.VSADSSMini_Validierung.v_Bauwerkskomponente.19901"]
 check="warning"

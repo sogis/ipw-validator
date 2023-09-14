@@ -93,17 +93,6 @@ IMPORTS UNQUALIFIED INTERLIS;
 
     END v_Leitung;
 
-    VIEW v_Organisation
-      PROJECTION OF SIA405_Base_Abwasser_LV95.Administration.Organisation;
-      =
-      ALL OF Organisation;
-
-      !!@ name = 14901
-      !!@ ilivalid.msg = "Zusätzliche Organisationen werden ignoriert"
-      SET CONSTRAINT INTERLIS.objectCount(ALL)==0; 
-
-    END v_Organisation;
-
     VIEW v_Bauwerkskomponente
       PROJECTION OF VSADSSMINI_2020_LV95.VSADSSMini.Bauwerkskomponente;
       =
